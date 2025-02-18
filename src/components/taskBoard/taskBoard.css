@@ -1,0 +1,94 @@
+.task__container {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+  }
+  
+  .columns {
+    padding-right: 24px;
+    height: 100vh;
+  
+    .columns__header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 24px;
+  
+      .status__color {
+        height: 12px;
+        width: 12px;
+        background-color: blue;
+        border-radius: 50%;
+      }
+  
+      .columns__header-heading {
+        color: #828fa3;
+        font-size: 0.75rem;
+        line-height: 15px;
+        letter-spacing: 2.4px;
+      }
+    }
+  
+    .card {
+      border-radius: 8px;
+      padding: 23px 16px;
+      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+      width: 280px;
+      letter-spacing: 2px;
+      color: rgba(0, 0, 0, 0.5);
+  
+      .card__header {
+        font-size: 0.9325rem;
+        font-weight: 700;
+        padding-bottom: 8px;
+        line-height: 19px;
+      }
+  
+      .card__subheader {
+        color: #828fa3;
+        font-size: 0.75rem;
+        line-height: 15px;
+      }
+    }
+  }
+  
+  .add-new-column {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .btn {
+    margin-top: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 20px;
+    border: none;
+  }
+  
+  .primary-btn {
+    background-color: #635fc7;
+    color: #ffffff;
+  }
+  
+  .show-sidebar {
+    background-color: #635fc7;
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 22px;
+    padding-left: 18px;
+    border-radius: 0 100% 100% 0;
+  }
+  
+.edit-task-btn{
+  margin-right: 10px;
+}

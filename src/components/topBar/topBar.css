@@ -1,0 +1,102 @@
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid #e4ebfa;
+    border-bottom: 1px solid #e4ebfa;
+    width: 100%;
+    height: fit-content;
+\  
+    .nav__buttons {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 16px;
+        padding-right: 10px;
+      }
+  
+    #nav__logo {
+      display: none;
+    }
+  
+    @media screen and (min-width: 768px) {
+      #nav__logo {
+        display: block;
+        padding: 28px 24px;
+        border-right: 1px solid #e4ebfa;
+      }
+    }
+  
+    .nav__menu {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding-left: 16px;
+      margin-right: auto;
+  
+      .nav__heading {
+        font-size: 1.125rem;
+        font-family: "Plus Jakarta Sans", serif;
+      }
+
+      @media screen and (min-width: 768px) {
+        .nav__heading {
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+  }
+
+  .add-task-btn {
+   margin: 10px 16px;
+
+    border-radius: 24px;
+  }
+  
+  .board-options{
+    padding: 19px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    position: absolute;
+    right: 0;
+    top: 60px;
+    display: flex;
+    border-radius: 10px;
+    gap: 10px;
+    flex-direction: column;
+    opacity:0.5;
+    color: black;
+    text-decoration: none;
+    z-index: 1000;
+    list-style-type: none;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav__arrow{
+  display: block;
+}
+
+
+@media screen and (min-width: 768px){
+  .nav__arrow{
+    display: none;
+  }
+
+  
+}
+
+.nav__logo-mobile{
+  display: block;
+}
+
+@media screen and (min-width: 768px){
+  .nav__logo-mobile{
+    display: none;
+  }
+
+  
+}

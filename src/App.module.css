@@ -1,0 +1,43 @@
+body{
+  font-family: "inter";
+}
+.mainPageContainer{
+  width: 100vw;
+  display: flex;
+}
+
+.mainPageContentContainer{
+  order: 2;
+  width: 100%;
+}
+
+.nav{
+  order: 2;
+}
+
+.mainPageSideBar{
+  order: 1;
+}
+
+/* .primary-btn {
+  background-color: #635fc7;
+  color: #ffffff;
+  border: none;
+}
+
+.input {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+  flex: 3;
+  list-style-type: none;
+}
+
+.form__board-name{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 93%;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(130, 143, 163, 0.25);
+} */

@@ -1,6 +1,5 @@
 import { useContext, useState, useEffect } from "react";
 import { AppState } from "../../AppState";
-import  './sidemenu.css'
 export default function SideMenuCreateBoard() {
   const {
     appState,

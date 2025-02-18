@@ -6,6 +6,10 @@ import { AppState } from "../../AppState";
 export function SideMenuList(props) {
   const { closeCreateModule, appState, handleBoardClick, toggleSideMenu } = useContext(AppState);
   const { boards, activeBoard } = appState;
+  const isMobile = window.innerWidth < 768
+  const createBoardStyle = {
+    paddingLeft: '0',
+ }
 
   const handleClick = (boardId) => {
     handleBoardClick(boardId);

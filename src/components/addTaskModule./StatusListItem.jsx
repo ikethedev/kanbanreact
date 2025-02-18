@@ -1,5 +1,6 @@
-export default function StatusListItem({id, title, selectStatus, activeId}) {
+export default function StatusListItem({id, title, selectStatus, activeId, showColumns}) {
     function handleClick(e){
+        showColumns()
         activeId(id)
         selectStatus(e.target.textContent)
     }

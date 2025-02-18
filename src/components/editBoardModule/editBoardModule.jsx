@@ -71,19 +71,28 @@ console.log(selectedBoard)
     </div>
 
     <div className="form__columns">
-      <label className="form__heading">Board Columns</label>
-      <ul className="form__columns-list">
-        {columns.map((column, index) => ( <li>{
-        <input 
-          type="text"
-          value={column.title}
-          onChange={(e) => handleColumnChange(index, e.target.value)}
-          className="form__column-name"
-          placeholder="Enter column name"
-        />
-        }</li>))}
-      </ul>
-    </div>
+          <label className="form__heading">Board Columns</label>
+          {columns.map((column, index) => (
+            <div key={column.id} className="column-input-group">
+              <input
+                type="text"
+                value={column.title}
+                onChange={(e) => handleColumnChange(index, e.target.value)}
+                className="form__column-name"
+                placeholder="Enter column name"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => handleRemoveColumn(index)}
+                className="remove-column-btn"
+              >
+                ×
+              </button>
+            </div>
+          ))}
+        </div>
+
 
     <div className="form__btns">
       <button type="button" className="secondary-btn btn" onClick={handleAddColumn}>

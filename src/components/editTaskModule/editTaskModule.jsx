@@ -115,6 +115,7 @@ export default function EditTaskModal({
                         handleSelectStatus(column.title, column.id)
                       }
                       activeId={getActiveColumnId}
+                      showColumns={showColumns}
                     />
                   );
                 })}

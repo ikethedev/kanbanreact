@@ -4,7 +4,7 @@ import { AppState } from "../../AppState"
 import StatusListItem from "./StatusListItem"
 import "./addTaskModule.css"
 
-export default function AddTaskModule({ addTaskToBoard, toggleTaskModule, setAppState, }) {
+export default function AddTaskModule({ addTaskToBoard, toggleTaskModule, setAppState }) {
 const { appState } = useContext(AppState)
 const { activeBoard } = appState
 const [toggleColumn, setToggleColumn] = useState(false)
@@ -76,7 +76,7 @@ function getActiveColumnId(id) {
             {/* Map through the current board columns and populate the form status */}
             {/* these are the same as the column title */}
              {selectedBoard.columns.map((column) => {
-              return <StatusListItem id={column.id} title={column.title} selectStatus={handleSelectStatus} activeId={getActiveColumnId} /> }
+              return <StatusListItem id={column.id} title={column.title} selectStatus={handleSelectStatus} activeId={getActiveColumnId} showColumns={showColumns}/> }
             )}
             
           </ul> : null}

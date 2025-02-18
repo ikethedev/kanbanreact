@@ -9,7 +9,10 @@ import SideMenuCreateBoard from "./sideMenuCreateBoard";
 export function SideMenu({ boards }) {
   const {appState, openCreateModule, closeCreateModule, toggleSideMenu, setAppState} = useContext(AppState);
    const { showSideMenu } = appState
- 
+   const createBoardStyle = {
+    paddingLeft: '0',
+ }
+
    function SideMenuToggle(){
     if(showSideMenu){
     return (
@@ -40,9 +43,11 @@ export function SideMenu({ boards }) {
     <>
        { appState.showCreateModule ? < CreateBoard closeModule={closeCreateModule}/> : null } 
    
-      <SideMenuLogo />
       <div className="modal-container">
+      <SideMenuLogo />
       <div className="sidemenu__platform">
+
+       
         <SideMenuList />
         <SideMenuToggle />
 

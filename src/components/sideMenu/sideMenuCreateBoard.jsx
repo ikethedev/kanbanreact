@@ -22,33 +22,37 @@ export default function SideMenuCreateBoard() {
     width: "90%",
 
   };
+  
+  const desktopStyle={
+    color:  "#635fc7",
+  }
 
-  const handleCreate = () => {
-    setAppState((prevState) => ({
-      ...prevState,
-      showSideMenu: false,        // Close side menu
-      showCreateModule: true,     // Open create board modal
-    }));
-    openCreateModule();
-  };
+
+
+ const handleCreate = () => {
+  setAppState((prevState) => ({
+    ...prevState,
+    showSideMenu: isMobile ? false : prevState.showSideMenu, // Only close on mobile
+    showCreateModule: true, // Open create board modal
+  }));
+  openCreateModule();
+};
 
   return (
     <>
       {isMobile ? (
         showModal && (
-          
             <div className="modal">
               <button style={btnStyle} onClick={handleCreate}>+ Create New Board</button>
             </div>
-    
         )
       ) : (
-        <li className="sidemenu__list-item platform__create-new">
+        <>
           <img src="./src/assets/board.svg" alt="Board Icon" />
-          <p onClick={handleCreate} className="sidemenu__add-item">
+          <p style={desktopStyle} onClick={handleCreate} className="sidemenu__add-item sidemenu__list-item platform__create-new">
             + Create New Board
           </p>
-        </li>
+        </>
       )}
     </>
   );

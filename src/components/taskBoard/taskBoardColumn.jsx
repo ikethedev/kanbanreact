@@ -12,7 +12,6 @@ export default function TaskBoardColumn({ title, key, taskCards }) {
     return(
         <section className="columns" id={key}>
         <div className="columns__header">
-          <div className="status__color"></div>
           <h3 className="columns__header-heading">{title}</h3>
         </div>
         <div className="column__cards">
